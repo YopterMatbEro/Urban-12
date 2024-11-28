@@ -3,6 +3,9 @@ import unittest
 
 
 class RunnerTest(unittest.TestCase):
+    is_frozen = False
+
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_walk(self):
         walker = Runner('Zombie')
 
@@ -11,6 +14,7 @@ class RunnerTest(unittest.TestCase):
 
         self.assertEqual(walker.distance, 50)
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_run(self):
         forest = Runner('Forest')
 
@@ -19,6 +23,7 @@ class RunnerTest(unittest.TestCase):
 
         self.assertEqual(forest.distance, 100)
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_challenge(self):
         bolt = Runner('Usain Bolt')
         gepard = Runner('Just_gepard')

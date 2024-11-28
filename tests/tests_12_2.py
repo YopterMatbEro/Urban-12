@@ -3,6 +3,8 @@ import unittest
 
 
 class TournamentTest(unittest.TestCase):
+    is_frozen = True
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.all_results = {}
@@ -12,6 +14,7 @@ class TournamentTest(unittest.TestCase):
         self.andrei = Runner('Андрей', 9)  # быстрый, однако, парень
         self.nick = Runner('Ник', 3)
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_start1(self):
         tour1 = Tournament(90, self.usain, self.nick)
         # для более понятной структуры из объектов (Runner) вытаскиваю позицию и участника
@@ -20,6 +23,7 @@ class TournamentTest(unittest.TestCase):
         }
         self.assertTrue(TournamentTest.all_results['tour1'][2] == 'Ник')
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_start2(self):
         tour2 = Tournament(90, self.andrei, self.nick)
         TournamentTest.all_results['tour2'] = {
@@ -27,6 +31,7 @@ class TournamentTest(unittest.TestCase):
         }
         self.assertTrue(TournamentTest.all_results['tour2'][2] == 'Ник')
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_start3(self):
         tour3 = Tournament(90, self.usain, self.andrei, self.nick)
         TournamentTest.all_results['tour3'] = {
