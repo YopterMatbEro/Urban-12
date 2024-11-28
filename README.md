@@ -8,3 +8,6 @@ ___
 * [Классы Runner и Tournament](module_12_2.py)
 * [Тесты](tests/tests_12_2.py)
 ___
+3) Заморозка тестов:
+* [Suite](tests/suite_12_3.py)
+___
