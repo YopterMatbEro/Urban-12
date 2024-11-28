@@ -4,3 +4,7 @@
 * [Класс Runner](module_12_1.py)
 * [Тесты](tests_12_1.py)
 ___
+2) Методы Юнит-тестирования:
+* [Классы Runner и Tournament](module_12_2.py)
+* [Тесты](tests_12_2.py)
+___
