@@ -49,7 +49,7 @@ class RunnerTest(unittest.TestCase):
                 bolt.walk()
                 gepard.run()
             self.assertNotEqual(bolt.distance, gepard.distance)
-            logging.info('"test_challenge выполнен успешно')
+            logging.info('"test_challenge" выполнен успешно')
         except TypeError:
             logging.warning('Неверный тип данных для объекта Runner', exc_info=True)
         except ValueError:
