@@ -1,13 +1,15 @@
 
-2024-11-29 16:49:34,420 | WARNING | Неверный тип данных для объекта Runner
+2024-11-29 16:57:11,718 | INFO | "test_challenge выполнен успешно
+
+2024-11-29 16:57:11,718 | WARNING | Неверный тип данных для объекта Runner
 Traceback (most recent call last):
-  File "C:\Users\Admin\Urban\Start\ModuleN12\tests\tests_12_4.py", line 32, in test_run
+  File "C:\Users\Admin\Urban\Start\ModuleN12\tests\tests_12_4.py", line 31, in test_run
     forest = Runner(3.14, 10)
   File "C:\Users\Admin\Urban\Start\ModuleN12\module_12_4.py", line 6, in __init__
     raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
 TypeError: Имя может быть только строкой, передано float
 
-2024-11-29 16:49:34,421 | WARNING | Неверная скорость для объекта Runner
+2024-11-29 16:57:11,719 | WARNING | Неверная скорость для объекта Runner
 Traceback (most recent call last):
   File "C:\Users\Admin\Urban\Start\ModuleN12\tests\tests_12_4.py", line 16, in test_walk
     walker = Runner('Zombie', -7)

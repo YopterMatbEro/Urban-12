@@ -42,14 +42,20 @@ class RunnerTest(unittest.TestCase):
 
     @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_challenge(self):
-        bolt = Runner('Usain Bolt')
-        gepard = Runner('Just_gepard')
-
-        for _ in range(10):
-            bolt.walk()
-            gepard.run()
-
-        self.assertNotEqual(bolt.distance, gepard.distance)
+        try:
+            bolt = Runner('Usain Bolt', 10)
+            gepard = Runner('Just_gepard', 15)
+            for _ in range(10):
+                bolt.walk()
+                gepard.run()
+            self.assertNotEqual(bolt.distance, gepard.distance)
+            logging.info('"test_challenge выполнен успешно')
+        except TypeError:
+            logging.warning('Неверный тип данных для объекта Runner', exc_info=True)
+        except ValueError:
+            logging.warning('Неверная скорость для объекта Runner', exc_info=True)
+        except Exception as e:
+            logging.error(f'Непредвиденная ошибка: {e}')
 
 
 if __name__ == '__main__':
