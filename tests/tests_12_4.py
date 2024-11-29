@@ -14,7 +14,6 @@ class RunnerTest(unittest.TestCase):
     def test_walk(self):
         try:
             walker = Runner('Zombie', -7)
-            logging.info('Успешно создан объект Runner')
             for _ in range(10):
                 walker.walk()
             self.assertEqual(walker.distance, 50)
